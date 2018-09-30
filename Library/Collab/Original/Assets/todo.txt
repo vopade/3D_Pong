@@ -1,0 +1,206 @@
+									#############################
+									#			TODO			#
+									#############################
+
+Jonas: 
+------------------------------------------------------------------------------------------------------------------------
+[x] Gitter als Begrenzung
+[x] Max. Ballgeschwindigkeit 2D und 3D
+[x] Aufschlagspunkt Ball an Schlägerebene
+[x] Kamerawackeln auf neue Kamera übertragen
+[x] Ball prallt an der Rückwand ab -> PlayArea wurde erst jetzt drauf gemacht sry :P
+[x] Icon Ausgabesystem überarbeiten (Was soll dies heißen?)
+[x] Initialses Gamestart fehlt bzw. Balländerung bei Start darf kein Sound machen
+[x] Panelsound funktioniert noch nicht
+[x] Je nach Start und Kameraansicht die Rückwand entfernen (nicht die Grids, da Planes einseitig sind!)
+[x] !!!Zum entfernen der Wände die Variable Need.goesToPlayer1 aus Gamecontrol Awake() nutzen!!!
+[x] Itemgröße -und Position angepasst, Ballgeschwindigkeit angepasst
+[~] Schweif hinzufügen evtl. aus Assetstore
+[~] Discomodus
+[x] Trigger frü Discomodus? Event? Shortcut im Spiel?
+[x] Taste entprellen
+
+Benedikt
+------------------------------------------------------------------------------------------------------------------------
+[x] Tasten reagieren oft gefühlt nur beim zweiten Druck -> Code in Update verschieben oder anderes
+[x] Ingame Countdown -> Neues Spiel -> Space bestätigen, nach Menü direkt Countdown starten
+[x] Highscore and Lowscore Handling testen
+[x] Herzchen Multiplayer geht nur bei einem Spieler runter
+[x] GameOverScreen und andere Texte
+[x] Ball ist gestartet ohne Space
+[x] Icons für die Items
+[x] Warten für x Sekunden
+[x] 2D Pong -> Punkte und Leben von 3D Pong verwalten (sofern Item und nicht GODMODE)
+[x] Bei Multiplayer bekommt der Gewinner die Punkte vermehrt -> 0.5x Multiplizierer pro Leben
+[x] Pannels aus mehreren Teilen (ca. 5) bauen, damit es schöner aussieht
+[x] Größe des Pannels entsprechend anpassen (Skalierung)
+[x] Geschwindigkeit des Pannels entlang der langen Seite erhöhen
+[x] Material der langen Seite des Spielfeldes anpassen (Skalierung)
+[x] Entsprechendes Pannelteil bei richtiger Ballposition im Aussehen verändern
+[x] Entsprechendes Playareateil bei richtiger Ballposition im Aussehen verändern
+[x] Indikator hover etc. rückgängig machen -> evtl. Array nutzen um mehrere Werte zu speichern
+[x] Werte an neue Skalierung anpassen (Ballspeed, automatisierter Gegner etc.)
+[x] Wenn das Pannel gehovert wird die Spielerwand nicht hovern (nur im SinglePlayer Modus, da sonst die Kamera dreht)
+[~] Hovern evtl. mit einem leichten Verzug (zeitlich oder Brikweise) -> hübscher fürs Auge
+[x] Playarea auf grid anpassen in 3D Pong! -> erweiterte Zustände als Alternativen hinzugefügt -> kein Einfluss auf 2D
+[x] Need.goesToPlayer1 für den Start nehmen, damit der Richtige Spieler vor der Runde angezeigt wird
+[x] Farbschema der GUI für Spieler 1/2 (Schwarz/Weiß) anpassen -> einheitliche Compliance
+[ ] Farbe des Mittelstreifens und des Balls evtl. auf eine Farbe ändern oder auswählbar machen (Menü)
+[ ] Trail bei steigender Geschwindigkeit etwas in der Länge kürzen -> wird schnell zu lang
+[ ] Ballposition, Geschwindigkeit, Pannelposition und alles andere nach Pause abrufen (nicht Need.isNewRound)
+
+
+Wer Zeit hat und es kann ;P
+------------------------------------------------------------------------------------------------------------------------
+Allgemein:
+[x] Im Singleplayermodus keine Kamera drehen!
+[x] Überprüfen, ob der Ball wirklich anders fliegt, je nach Kontakt mit Panel (leider nur MINIMAL)
+[~] Kalkulierter Auftrittszeitpunkt in Sekunden (nicht mehr nötig oder?!)
+[~] Panel wieder in den Uhrsprung setzen (wirkt komisch, daher nicht umsetzen)
+[~] Spielersteuerung bei Kameradreh invertieren (mit Need.ball_direction... :D)
+[~] Globale Event-Zeiten (Dauer) definieren -> jetzt so gelöst: Need.isItem = false;
+[~] Ballhänger vermeiden -> fliegt nur noch gerade...
+Design:
+[x] Zwei globale Farben für die zwei Spieler, damit man besser sieht, wer wer ist!
+[~] Am Spielfeldbegrezung Lichter mitlaufen lassen, wo der Ball grade ist
+[x] Farben der Pannelindikatoren müssen noch angepasst werden (drag and drop)
+[x] Licht- und Schatteneffekte für Ball und Panels
+[ ] Bounce Animation und Punkteanimation!
+[ ] Musik für Discomodus
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+									#############################
+									#			NEUES			#
+									#############################
+v. 18.03.23
+ - Ballindikatoren
+ - Neues todo Schema
+v. 18.03.25
+ - Neue Code Struktur (insbesondere Kommentare)
+ - Icons eingeführt
+v. 18.03.26
+ - Ballindikatoren sind "funktional" ;)
+v. 18.04.02
+ - Icons funktionieren endlich korrekt
+ - Bestenlisten funktionieren
+ - Texte funktionieren
+ - Timer funktioniert, aber mit Time.deltaTime
+v. 18.04.03
+ - Maximalgeschwindigkeit gefixt per Betrag von rb.velocity.x
+ - Kamerawackeln auch bei neuer Kamera nun vorhanden
+v. 18.04.05
+ - Warten funktioniert nun korrekt
+v. 18.04.09
+ - Bei Multiplayer You win PlayerXYZ screen
+v. 18.04.10
+ - Neue Szene mit besserer Playarea -> erübrigt die Problematik mit der Umgebung/Welt
+v. 18.04.11
+ - Neue Pannels (mehr Teile)
+ - Neue Ausrichtung des Gitters
+ - Neue Indikatoren
+v. 18.04.14
+ - Grid in der Playersicht ist nun auf 25 Alpha
+ - Pannel sind nun auf 175 Alpha
+ - Punkte der Player sind nun richtig possitioniert
+ - Mittlelinie zeigt nun "Status" an, andere Vorschläge gerne bringen!
+v. 18.04.15
+ - Truhen emittieren nun Licht, damit diese besser sichtbar sind
+ - Einfacher Schweif hinzugefügt --> Als Childobjekt, damit der Schweif auch bei Event unsichtbar wird
+ - Untere Geschwindigkeitsgrenze für den Ball hinzugefügt da anaonsten keine kollision erkannt wird. Startet nun mit min. 1.9f
+ - Pannel Indikator hinzugefügt
+ - Erste, einfache Disco hinzugefügt
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+									#############################
+									#			FIXES			#
+									#############################
+v. 18.03.20
+ - Panel übergibt nicht mehr Material an die Playarea
+ - Playarea besitzt nun Material für innen und außen
+ - Playarea wurde wieder aus Würfeln erstellt für die Kollisionserkennung
+v. 18.03.25
+ - Panels können sich nicht mehr heraus glitchen (Boxcollider wurde gefixt)
+ - Der Ball glitcht sich zu Beginn heraus und fliegt zu schnell (als ob er in einem anderen Objekt drinnen wäre)
+ - Indikatoren haben keinen Collider mehr
+ - Highscore wurde angepasst -> copy-paste von lowscore wurde zuvor nicht korrekt angepasst
+v. 18.03.26
+ - Ballindikatoren wurden in Skalierung und Verhalten verbessert
+ - Singleplayer 3D Panel verhält sich nun wie vorgesehen
+v. 18.04.02
+ - Pong 2D ist ab und zu beim Multiplayer nach mehreren Ballwechseln beim Punkten getriggert
+Dies führte wahrscheinlich dazu, dass:
+ - Pong 2D startet nicht von selbst?!
+ - Pong 2D Menü geht nicht in das Hauptmenü!
+v. 18.04.03
+ - Wenn der Ball zu schnell ist, kann er durch den Schläger hindurchfliegen und punkten oder aus dem Spielfeld
+ hinausfliegen
+ - Spiel wird manchmal nicht richtig beendet
+v. 18.04.05
+ - Während Leertasten-Text kann nun das Menü getriggert werden!
+v. 18.04.09
+ - GameOver nicht erst nach neuer Runde
+ - Items werden wieder korrekt getriggert
+ - Pausemenü zeigt nun nach rückkehr den Leertasten-Text an! (doppel Esc == "Resume")
+ - Kameraansicht wird schon zum Start angepasst (keine undefinierte Position mehr)
+Dies führte wahrscheinlich dazu, dass:
+ - Escape im Pausemenü führt zu einer anderen Kamera
+v. 18.04.10
+ - Icons der Items gehen nicht mehr zu schnell weg (nutzt den gegebenen code mit einem bool flag)
+ - Dies und das
+v. 18.04.14
+ - Schläger praLLt in der Ecke bei Loslassen ab
+ - Ball prallt nicht ab / bleibt kleben --> Collider?
+ - Farben sind nun wieder richtig benannt -> weiß/schwarz etc.
+ - Items und Ball an neues Spielfeld angepasst
+ - Wände hinter Spieler werden ausgeblendet
+ - Farbe der Indikatoren passt jezt besser
+v. 18.04.15 
+ - CameraShaking und BallInversion gefixt, ballRespawn und panelshrinking deaktiviert, wkeiten angepasst
+ - Die Indikatoren der Playerwände arbeiten nun korrekt
+ - Panel verhaken sich nicht mehr an den Wänden
+ - PanelShrinking gefixt
+ - Speed-Slider gefixt
+v. 18.04.16
+ - Punkte werden wieder gezählt -> Playarea musste um Grid erweitert werden
+ - Trail verhält sich besser
+ - Zweifarbiges Hub ist noch nicht fehlerfrei!
+ - Leben werden nicht erst bei einem weiteren Kamerawchsel nachgefärbt!
+ - GameOver nicht mehr erst nach Need.newRound
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+									#############################
+									#			BUGS			#
+									#############################
+
+ - In der "alten" Szene kann sich der Spieler bei gedrückthalten der Tasten während eines Ballkontaktes herausglitchen
+ - In der "alten" Szene ging zum Ende der Ball durch das neue Pannel (nur im Singleplayer Modus)
+ - Ball startet manchmal ohne leertaste getriggert zu haben -> nimmt diese evtl. zu früh an
+ - Nothing Happend Image wird nicht angezeigt
+ WICHTIGE FEHLER:
+ - Ball funktioniert nicht mehr richtig (verliert an Geschwindigkeit und bleibt stehen)
+ - Es ist nur ein Schatten im Discomodus für den Ball da obwohl es deutlich mehr Lichtquellen gibt
+ - Pointlight wird nicht heller wenn kein Discomodus aktiv wenn Spiel mit strg+b gestartet wurde
+ - Need.goesToPlayer1 geht nur bei der Initialisierung, anstatt jedem Punkt...
+ - Leben werden nicht korrekt gezählt, zwei -> GameOver -> wieder weiter?!
+
+
+<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+									#############################
+									#			Anderes			#
+									#############################
+
+Design:
+--------------------------------------------------
+Grafik: Szene mit Umgebung etc. (evtl. mehrere -> Menü) und anderes Design für Items etc. (evtl. Geschenk o.ä.)
+Effekte: Ballspur evtl. und Lichter/Leuchten -> Schatten
+Animationen: Panel werden langsam kleiner, nicht schlagartig
+
+
+Anmerkung: Kugel verliert bei jedem Bounce ein wenig Geschwindigkeit, den Winkel und den Spinn
+-> Was ist los mit dieser f###### DM Engine?! WTF man MUSS alles selbst machen um auf der sicheren Seite zu sein XD

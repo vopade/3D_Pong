@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 050e1a7809873e84287304eaa077101c
+timeCreated: 1517311553
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ball: {instanceID: 0}
+  - panel: {instanceID: 0}
+  - video: {instanceID: 0}
+  - invers: {instanceID: 0}
+  - smaller: {instanceID: 0}
+  - faster: {instanceID: 0}
+  - shaking: {instanceID: 0}
+  - nothing: {instanceID: 0}
+  - slower: {instanceID: 0}
+  - newBall: {instanceID: 0}
+  - notseeing: {instanceID: 0}
+  - empty: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

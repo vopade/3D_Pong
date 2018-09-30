@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: b097b302571366d41864df63325ee492
+  - enabled: 0
+    path: Assets/3D_Pong.unity
+    guid: 13b342829847a334eaeb46e74978253c
+  - enabled: 1
+    path: Assets/3D_Pong_alternative.unity
+    guid: c5f8ff79db2b4d84c9bea5a32ac91c2a
+  - enabled: 1
+    path: Assets/Pause.unity
+    guid: 6e6a542970d8e7f47b0896d208c908d1
+  - enabled: 1
+    path: Assets/Retro.unity
+    guid: a53730b4828a411498bc9c3cc93c0c04

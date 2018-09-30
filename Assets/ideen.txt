@@ -1,0 +1,18 @@
+Alt:
+- https://free3d.com/3d-model/balls-neon-954970.html
+- Spiegelungen -> Ballposition
+
+Neu:
+- Klares Design, evtl. schwarz und weiß -> Leuchten und Schatten
+- Ansicht von hinten öffnen, evtl. Spielfeld auf 16:9 anpassen -> Sicht wie in eine "Röhre"
+- Ball bekommt farbe des Spielers + Trail -> Animation für Explosion
+- Trailrenderer benutzen, der kann anscheinend doch was XD
+- Ballindikatoren anpassen (Lichter und Schatten)
+- Menü -> Spielfeldwahl und evtl. Farbwahl
+- Schläger besser erstellen (mehrere Felder (vielleicht 5, die leuchten können (für eine schönere Ballindikation))
+- Gitterfarbe anpassen bei Spielerwechsel etc.
+- Szene besser einbinden...
+
+- Bei einfarbigen Gegenständen fällt die fehlende Rotation nicht auf -> wirkt natürlicher
+- Dazu sieht es auch stimmiger aus
+- Die dunklen Farben sind für den Schweif
